@@ -1,0 +1,44 @@
+body{
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+h1{
+  font-size: 60px;
+}
+.logo img{
+  width: 50px;
+}
+#Form{
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  transition: all 0.5s;
+}
+.box{
+  border: 2px solid #fff;
+  height: 590px;
+  width: 1000px;
+}
+.loginText{
+  background-image: url(../images/login-img.jpg);
+  background-size: cover;
+  background-position: center ;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+.form i {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.siginupText{
+  background-image: url(../images/signup-img.jpg);
+  background-size: cover;
+  background-position: center ;
+}
