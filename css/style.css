@@ -1,44 +1,49 @@
-body{
+body {
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
+  background-color: black;
   height: 100vh;
 }
-h1{
+h1 {
   font-size: 60px;
 }
-.logo img{
+.logo img {
   width: 50px;
 }
-#Form{
+#Form {
   backdrop-filter: blur(5px);
   height: 100vh;
-  position: fixed;
-  inset: 0;
-  transition: all 0.5s;
+  margin: 150px 0;
+  padding-bottom: 150px;
+  overflow: visible;
 }
-.box{
+.box {
   border: 2px solid #fff;
-  height: 590px;
+  margin: 70px 0;
   width: 1000px;
 }
-.loginText{
+.loginText {
   background-image: url(../images/login-img.jpg);
   background-size: cover;
-  background-position: center ;
-}
-.form-control:focus {
-  box-shadow: none;
-}
-.form i {
-  top: 0;
-  right: 0;
-  cursor: pointer;
+  background-position: center;
 }
 
-.siginupText{
+.siginupText {
   background-image: url(../images/signup-img.jpg);
   background-size: cover;
-  background-position: center ;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  /* .form {
+    height: 220px;
+  } */
+}
+@media (min-width: 576px) {
+  #Form {
+    margin: 0 0;
+    padding-bottom: 0;
+  }
 }

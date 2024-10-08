@@ -1,69 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="images/*" href="images/1000_F_300148731_RyO4Uhg1hiWouMl55pDYXMKWqGlikyK2.jpg">
-  <meta name="description" content="Login System">
-  <title>login</title>
-  <link rel="stylesheet" href="./css/all.min.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="inner d-flex align-items-center justify-content-between m-3">
-        <div class="logo d-flex align-items-center">
-          <img src="./images/logo-removebg-preview.png" class=" me-3" alt="">
-          <p class="text-light fs-3">CodingNepal</p>
-        </div>
-        <ul class="nav fs-5">
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Courses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Contact us</a>
-          </li>
-        </ul>
-        <button class="btn btn-light px-3 fs-5" id="loginForm">Login</button>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <div id="Form" class="d-none">
-        <div class="box d-flex position-absolute start-50 top-50 translate-middle">
-          <div class="loginText w-50 text-light px-2 py-3 text-center d-flex flex-column align-items-center justify-content-center">
-            <h2>Welcome Back</h2>
-            <p>Please log in using your personal information to stay connected with us.</p>
-          </div>
-          <div class="form px-2 py-3 bg-light w-50 text-center position-relative">
-            <i class="fa-solid fa-xmark position-absolute m-2 fs-4 fw-bold" id="closeIcon"></i>
-            <h3 class="mb-5 fw-bold">Login</h3>
-            <div class="mb-3">
-              <input type="email" class="form-control w-75 mx-auto py-2 " id="emailLog" placeholder="Email address">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="images/*"
+      href="images/1000_F_300148731_RyO4Uhg1hiWouMl55pDYXMKWqGlikyK2.jpg"
+    />
+    <meta name="description" content="Login System" />
+    <title>Login System</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="loginSection">
+        <div id="Form" class="d-flex justify-content-center align-items-center">
+          <div class="box mx-3 d-flex flex-column flex-md-row">
+            <div
+              class="loginText text-light px-2 py-3 text-center w-sm-50 w-100 d-flex flex-column align-items-center justify-content-center"
+            >
+              <h2>Welcome Back</h2>
+              <p>
+                Please log in using your personal information to stay connected
+                with us.
+              </p>
             </div>
-            <div class="mb-3">
-              <input type="password" class="form-control w-75 mx-auto py-2" id="passwordLog" placeholder="Password">
+            <div
+              class="form px-2 py-3 bg-light w-100 w-sm-50 text-center position-relative"
+            >
+              <h3 class="mb-5 fw-bold">Login</h3>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control w-75 mx-auto py-2"
+                  id="emailLog"
+                  placeholder="Email address"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control w-75 mx-auto py-2"
+                  id="passwordLog"
+                  placeholder="Password"
+                />
+              </div>
+              <p
+                id="alertLogin"
+                class="mt-2 alert alert-danger w-75 mx-auto rounded-3 p-2 d-none"
+              >
+                Please make sure that you enter the email and password correctly
+              </p>
+              <button class="btn btn-outline-info w-50 my-3" id="loginSubmit">
+                Login
+              </button>
+              <div
+                class="d-flex align-items-center justify-content-center gap-1 flex-column flex-sm-row"
+              >
+                <p class="mb-0">Don't have an account?</p>
+                <button
+                  id="signup"
+                  class="text-decoration-none text-info btn border-0 p-1"
+                >
+                  Signup
+                </button>
+              </div>
             </div>
-            <p id="alertLogin" class="mt-2 alert alert-danger w-75 mx-auto rounded-3 p-2 d-none">Please make sure that you enter the email and password correctly</p>
-            <button class="btn btn-outline-info w-50 my-3 " id="loginBtn" >Login</button>
-            <p>Don't have an account? <a href="./page/signUp.html" class="text-decoration-none text-info">Signup</a></p>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <script src="js/script.js"></script>
-</body>
+      <div class="d-none" id="siginupSection">
+        <div id="Form" class="d-flex align-items-center justify-content-center">
+          <div class="box mx-3 d-flex flex-column flex-md-row">
+            <div
+              class="siginupText w-sm-50 w-100 text-light p-3 text-center d-flex flex-column align-items-center justify-content-center"
+            >
+              <h2>Create Account</h2>
+              <p>
+                To become a part of our community, please sign up using your
+                personal information.
+              </p>
+            </div>
+            <div
+              class="form px-2 py-3 bg-light w-100 w-sm-50 text-center position-relative"
+            >
+              <h3 class="mb-5 fw-bold">Signup</h3>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control w-75 mx-auto py-2"
+                  id="name"
+                  placeholder="Your name"
+                />
+                <p
+                  id="alertName"
+                  class="mt-2 bg-danger-subtle w-75 mx-auto rounded-3 p-2 d-none"
+                >
+                  Username must be between 3 and 10 letters
+                </p>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control w-75 mx-auto py-2"
+                  id="email"
+                  placeholder="Email address"
+                />
+                <p
+                  id="alertEmail"
+                  class="mt-2 bg-danger-subtle w-75 mx-auto rounded-3 p-2 d-none"
+                >
+                  Email must be like (agd2@gmail.com)
+                </p>
+                <p
+                  id="alertExitEmail"
+                  class="mt-2 bg-danger-subtle w-75 mx-auto rounded-3 p-2 d-none"
+                >
+                  this email is exit
+                </p>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control w-75 mx-auto py-2"
+                  id="password"
+                  placeholder="Password"
+                />
+                <p
+                  id="alertPas"
+                  class="mt-2 bg-danger-subtle w-75 mx-auto rounded-3 p-2 d-none"
+                >
+                  Password must be between 5 and 20 character
+                </p>
+              </div>
+              <button class="btn btn-outline-info w-50 my-3" id="signUp">
+                signUp
+              </button>
+              <p
+                id="alertSingup"
+                class="mt-2 alert alert-danger w-75 mx-auto rounded-3 p-2 d-none"
+              >
+                Please follow all instructions in order to create a new email
+              </p>
+              <div
+                class="d-flex align-items-center justify-content-center gap-1"
+              >
+                <p class="mb-0">Already have an account?</p>
+                <button
+                  id="loginBtn"
+                  class="text-decoration-none text-info btn border-0 p-1"
+                >
+                  Login
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/login.js"></script>
+    <script src="js/singnup.js"></script>
+  </body>
 </html>
